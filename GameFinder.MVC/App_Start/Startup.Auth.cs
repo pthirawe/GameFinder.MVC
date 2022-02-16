@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using GameFinder.MVC.Models;
+using GameFinder.Data;
 
 namespace GameFinder.MVC
 {
