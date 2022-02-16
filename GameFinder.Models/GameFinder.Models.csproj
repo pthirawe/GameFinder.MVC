@@ -55,6 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DeveloperCreate.cs" />
+    <Compile Include="DeveloperDetail.cs" />
+    <Compile Include="DeveloperListItem.cs" />
+    <Compile Include="DeveloperUpdate.cs" />
     <Compile Include="GameCreate.cs" />
     <Compile Include="GameDetail.cs" />
     <Compile Include="GameListItem.cs" />
