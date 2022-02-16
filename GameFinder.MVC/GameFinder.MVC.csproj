@@ -252,6 +252,20 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GameFinder.Data\GameFinder.Data.csproj">
+      <Project>{86b60031-3c51-4487-b901-7af721ba7d89}</Project>
+      <Name>GameFinder.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameFinder.Models\GameFinder.Models.csproj">
+      <Project>{a4c0fce2-ee9d-4571-af3c-287617573606}</Project>
+      <Name>GameFinder.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameFinder.Services\GameFinder.Services.csproj">
+      <Project>{576fdca0-5ac9-42ad-a65e-d4b261a74405}</Project>
+      <Name>GameFinder.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
