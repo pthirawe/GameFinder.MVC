@@ -53,7 +53,9 @@ namespace GameFinder.Services
                     Title = game.Title,
                     Description = game.Description,
                     ReleaseDate = game.ReleaseDate,
+                    DeveloperId=game.DeveloperId,
                     Developer = game.Developer.Name,
+                    PublisherId = game.PublisherId,
                     Publisher = game.Publisher.Name
                 };
             }
