@@ -24,6 +24,7 @@ namespace GameFinder.Data
 
         public DbSet<Game> Games { get; set; }
         public DbSet<Developer> Developers { get; set; }
+        public DbSet<Publisher> Publishers { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

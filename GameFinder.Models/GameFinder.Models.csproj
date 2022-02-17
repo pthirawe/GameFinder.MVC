@@ -54,15 +54,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DeveloperCreate.cs" />
-    <Compile Include="DeveloperDetail.cs" />
-    <Compile Include="DeveloperListItem.cs" />
-    <Compile Include="DeveloperUpdate.cs" />
-    <Compile Include="GameCreate.cs" />
-    <Compile Include="GameDetail.cs" />
-    <Compile Include="GameListItem.cs" />
-    <Compile Include="GameUpdate.cs" />
+    <Compile Include="DeveloperModels\DeveloperCreate.cs" />
+    <Compile Include="DeveloperModels\DeveloperDetail.cs" />
+    <Compile Include="DeveloperModels\DeveloperListItem.cs" />
+    <Compile Include="DeveloperModels\DeveloperUpdate.cs" />
+    <Compile Include="GameModels\GameCreate.cs" />
+    <Compile Include="GameModels\GameDetail.cs" />
+    <Compile Include="GameModels\GameListItem.cs" />
+    <Compile Include="GameModels\GameUpdate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublisherModels\PublisherUpdate.cs" />
+    <Compile Include="PublisherModels\PublisherDetail.cs" />
+    <Compile Include="PublisherModels\PublisherCreate.cs" />
+    <Compile Include="PublisherModels\PublisherListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
