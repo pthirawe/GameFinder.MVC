@@ -50,7 +50,7 @@ namespace GameFinder.Services
                     OverallRating = r.OverallScore
                 });
 
-                return list.ToArray();
+                return list.ToList();
             }
         }
 
