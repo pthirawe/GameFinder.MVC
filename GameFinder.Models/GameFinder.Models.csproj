@@ -67,10 +67,15 @@
     <Compile Include="PublisherModels\PublisherDetail.cs" />
     <Compile Include="PublisherModels\PublisherCreate.cs" />
     <Compile Include="PublisherModels\PublisherListItem.cs" />
+    <Compile Include="RatingModels\RatingCreate.cs" />
+    <Compile Include="RatingModels\RatingDetail.cs" />
+    <Compile Include="RatingModels\RatingListItem.cs" />
+    <Compile Include="RatingModels\RatingUpdate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

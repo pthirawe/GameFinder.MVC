@@ -14,6 +14,8 @@ namespace GameFinder.Data
         public int RatingId { get; set; }
         [Required, ForeignKey(nameof(Game))]
         public int GameId { get; set; }
+        public Guid Author { get; set; }
+        public string AuthorName { get; set; }
         public string Review { get; set; }
         [Required, Range(0,10)]
         public double VisualsScore { get; set; }
@@ -28,5 +30,7 @@ namespace GameFinder.Data
                 return (VisualsScore+GameplayScore+SoundScore)/3;
             }
         }
+
+        public virtual Game Game { get; set; }
     }
 }
