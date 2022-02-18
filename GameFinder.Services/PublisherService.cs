@@ -36,7 +36,7 @@ namespace GameFinder.Services
                     Name = p.Name,
                 });
 
-                return query.ToArray();
+                return query.ToList();
             }
         }
 

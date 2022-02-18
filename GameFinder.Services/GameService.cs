@@ -37,7 +37,7 @@ namespace GameFinder.Services
                     GameId = g.GameId,
                     Title = g.Title,
                 });
-                return gameList.ToArray();
+                return gameList.ToList();
             }
         }
 

@@ -173,6 +173,7 @@
     <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PlatformController.cs" />
     <Compile Include="Controllers\PublisherController.cs" />
     <Compile Include="Controllers\RatingController.cs" />
     <Compile Include="Global.asax.cs">
@@ -259,6 +260,11 @@
     <Content Include="Views\Rating\Details.cshtml" />
     <Content Include="Views\Rating\Edit.cshtml" />
     <Content Include="Views\Rating\Delete.cshtml" />
+    <Content Include="Views\Platform\Index.cshtml" />
+    <Content Include="Views\Platform\Create.cshtml" />
+    <Content Include="Views\Platform\Details.cshtml" />
+    <Content Include="Views\Platform\Edit.cshtml" />
+    <Content Include="Views\Platform\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
