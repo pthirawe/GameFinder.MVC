@@ -58,6 +58,8 @@
     <Compile Include="DeveloperModels\DeveloperDetail.cs" />
     <Compile Include="DeveloperModels\DeveloperListItem.cs" />
     <Compile Include="DeveloperModels\DeveloperUpdate.cs" />
+    <Compile Include="FeatureModels\FeatureCreate.cs" />
+    <Compile Include="FeatureModels\FeatureUpdate.cs" />
     <Compile Include="GameModels\GameCreate.cs" />
     <Compile Include="GameModels\GameDetail.cs" />
     <Compile Include="GameModels\GameListItem.cs" />
