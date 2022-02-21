@@ -12,14 +12,14 @@ namespace GameFinder.Services
     {
         public bool CreateFeature(FeatureCreate model)
         {
-            var entity = new Genre()
+            var entity = new Feature()
             {
                 Name = model.Name,
             };
 
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Genres.Add(entity);
+                ctx.Features.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
