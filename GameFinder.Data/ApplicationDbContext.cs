@@ -28,6 +28,7 @@ namespace GameFinder.Data
         public DbSet<Rating> Ratings { get; set; }
         public DbSet<Platform> Platforms { get; set; }
         public DbSet<Genre> Genres { get; set; }
+        public DbSet<Feature> Features { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
