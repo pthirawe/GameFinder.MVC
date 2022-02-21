@@ -23,13 +23,7 @@ namespace GameFinder.Data
         public double GameplayScore { get; set; }
         [Required, Range(0, 10)]
         public double SoundScore { get; set; }
-        public double OverallScore
-        {
-            get
-            {
-                return (VisualsScore+GameplayScore+SoundScore)/3;
-            }
-        }
+        public double OverallScore { get; set; }
 
         public virtual Game Game { get; set; }
     }
