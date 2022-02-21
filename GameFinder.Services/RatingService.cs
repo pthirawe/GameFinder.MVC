@@ -89,6 +89,7 @@ namespace GameFinder.Services
                 entity.VisualsScore = model.VisualScore;
                 entity.GameplayScore = model.GameplayScore;
                 entity.SoundScore = model.SoundScore;
+                entity.OverallScore = Math.Round((model.VisualScore + model.GameplayScore + model.SoundScore) / 3, 2);
 
                 return ctx.SaveChanges() == 1;
             }
