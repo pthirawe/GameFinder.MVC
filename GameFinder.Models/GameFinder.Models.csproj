@@ -62,6 +62,10 @@
     <Compile Include="GameModels\GameDetail.cs" />
     <Compile Include="GameModels\GameListItem.cs" />
     <Compile Include="GameModels\GameUpdate.cs" />
+    <Compile Include="GenreModels\GenreCreate.cs" />
+    <Compile Include="GenreModels\GenreDetail.cs" />
+    <Compile Include="GenreModels\GenreListItem.cs" />
+    <Compile Include="GenreModels\GenreUpdate.cs" />
     <Compile Include="PlatformModels\PlatformUpdate.cs" />
     <Compile Include="PlatformModels\PlatformDetail.cs" />
     <Compile Include="PlatformModels\PlatformCreate.cs" />
