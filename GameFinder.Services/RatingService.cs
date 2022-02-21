@@ -26,10 +26,12 @@ namespace GameFinder.Services
             {
                 GameId = model.GameId,
                 Author = _userId,
+                AuthorName = _userName,
                 Review = model.Review,
                 VisualsScore = model.VisualScore,
                 GameplayScore = model.GameplayScore,
-                SoundScore = model.SoundScore
+                SoundScore = model.SoundScore,
+                OverallScore = Math.Round((model.VisualScore+model.GameplayScore+model.SoundScore)/3,2)
             };
 
             using (var ctx = new ApplicationDbContext())
