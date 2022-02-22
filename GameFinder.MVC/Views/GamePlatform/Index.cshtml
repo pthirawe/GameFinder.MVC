@@ -1,0 +1,49 @@
+﻿@model IEnumerable<GameFinder.Data.GamePlatform>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GameId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Game.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlatformId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Platform.Name)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.GameId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Game.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlatformId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Platform.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id = new { item.GameId, item.PlatformId } })
+        </td>
+    </tr>
+    }
+
+</table>

@@ -55,6 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DeveloperService.cs" />
+    <Compile Include="GameFeatureService.cs" />
+    <Compile Include="GamePlatformService.cs" />
+    <Compile Include="GameGenreService.cs" />
     <Compile Include="GameService.cs" />
     <Compile Include="FeatureService.cs" />
     <Compile Include="GenreService.cs" />

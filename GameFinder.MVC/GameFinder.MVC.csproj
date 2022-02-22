@@ -172,6 +172,9 @@
     <Compile Include="Controllers\DeveloperController.cs" />
     <Compile Include="Controllers\FeatureController.cs" />
     <Compile Include="Controllers\GameController.cs" />
+    <Compile Include="Controllers\GameFeatureController.cs" />
+    <Compile Include="Controllers\GameGenreController.cs" />
+    <Compile Include="Controllers\GamePlatformController.cs" />
     <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -277,6 +280,15 @@
     <Content Include="Views\Feature\Details.cshtml" />
     <Content Include="Views\Feature\Edit.cshtml" />
     <Content Include="Views\Feature\Delete.cshtml" />
+    <Content Include="Views\GameFeature\Index.cshtml" />
+    <Content Include="Views\GameFeature\Create.cshtml" />
+    <Content Include="Views\GameFeature\Delete.cshtml" />
+    <Content Include="Views\GameGenre\Index.cshtml" />
+    <Content Include="Views\GameGenre\Create.cshtml" />
+    <Content Include="Views\GameGenre\Delete.cshtml" />
+    <Content Include="Views\GamePlatform\Index.cshtml" />
+    <Content Include="Views\GamePlatform\Create.cshtml" />
+    <Content Include="Views\GamePlatform\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
