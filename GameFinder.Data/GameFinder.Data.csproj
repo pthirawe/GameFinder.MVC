@@ -58,6 +58,9 @@
     <Compile Include="Developer.cs" />
     <Compile Include="Feature.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="GameFeature.cs" />
+    <Compile Include="GameGenre.cs" />
+    <Compile Include="GamePlatform.cs" />
     <Compile Include="Genre.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Platform.cs" />
