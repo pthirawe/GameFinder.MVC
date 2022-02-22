@@ -1,4 +1,4 @@
-﻿@model IEnumerable<GameFinder.Data.GamePlatform>
+﻿@model IEnumerable<GameFinder.Models.JoiningModels.GameFeatureDisplay>
 
 @{
     ViewBag.Title = "Index";
@@ -15,35 +15,35 @@
             @Html.DisplayNameFor(model => model.GameId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Game.Title)
+            @Html.DisplayNameFor(model => model.Title)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PlatformId)
+            @Html.DisplayNameFor(model => model.FeatureID)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Platform.Name)
+            @Html.DisplayNameFor(model => model.Name)
         </th>
         <th></th>
     </tr>
 
-    @foreach (var item in Model) {
+@foreach (var item in Model) {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.GameId)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Game.Title)
+            @Html.DisplayFor(modelItem => item.Title)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.PlatformId)
+            @Html.DisplayFor(modelItem => item.FeatureID)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Platform.Name)
+            @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
-            @Html.ActionLink("Delete", "Delete", new { id = new { item.GameId, item.PlatformId } })
+            @Html.ActionLink("Delete", "Delete", new { id=new { item.GameId, item.FeatureID } })
         </td>
     </tr>
-    }
+}
 
 </table>
