@@ -1,4 +1,5 @@
 ﻿using GameFinder.Data;
+using GameFinder.Models.JoiningModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,19 +19,34 @@ namespace GameFinder.Services
             }
         }
 
-        public IEnumerable<GameFeature> GetGameFeatures()
+        public IEnumerable<GameFeatureDisplay> GetGameFeatures()
         {
             using (var ctx = new ApplicationDbContext())
             {
-                return ctx.GameFeatures.ToList();
+                var query = ctx.GameFeatures.Select(gp => new GameFeatureDisplay()
+                {
+                    GameId = gp.GameId,
+                    Title = gp.Game.Title,
+                    FeatureID = gp.FeatureId,
+                    Name = gp.Feature.Name
+                });
+                return query.ToList();
             }
         }
 
-        public GameFeature GetGameFeatureById(int id)
+        public GameFeatureDisplay GetGameFeatureById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                return ctx.GameFeatures.Find(id);
+                var entity = ctx.GameFeatures.Find(id);
+                var model = new GameFeatureDisplay()
+                {
+                    GameId = entity.GameId,
+                    Title = entity.Game.Title,
+                    FeatureID = entity.FeatureId,
+                    Name = entity.Feature.Name
+                };
+                return model;
             }
         }
 
