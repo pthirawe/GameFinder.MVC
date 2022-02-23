@@ -64,6 +64,7 @@
     <Compile Include="GameModels\GameDetail.cs" />
     <Compile Include="GameModels\GameListItem.cs" />
     <Compile Include="GameModels\GameUpdate.cs" />
+    <Compile Include="JoiningModels\GameVendorUpdate.cs" />
     <Compile Include="GenreModels\GenreCreate.cs" />
     <Compile Include="GenreModels\GenreDetail.cs" />
     <Compile Include="GenreModels\GenreListItem.cs" />
@@ -71,6 +72,9 @@
     <Compile Include="JoiningModels\GameGenreDisplay.cs" />
     <Compile Include="JoiningModels\GameFeatureDisplay.cs" />
     <Compile Include="JoiningModels\GamePlatformDisplay.cs" />
+    <Compile Include="JoiningModels\GameVendorCreate.cs" />
+    <Compile Include="JoiningModels\GameVendorDetail.cs" />
+    <Compile Include="JoiningModels\GameVendorListItem.cs" />
     <Compile Include="PlatformModels\PlatformUpdate.cs" />
     <Compile Include="PlatformModels\PlatformDetail.cs" />
     <Compile Include="PlatformModels\PlatformCreate.cs" />
@@ -84,6 +88,10 @@
     <Compile Include="RatingModels\RatingDetail.cs" />
     <Compile Include="RatingModels\RatingListItem.cs" />
     <Compile Include="RatingModels\RatingUpdate.cs" />
+    <Compile Include="VendorModels\VendorCreate.cs" />
+    <Compile Include="VendorModels\VendorDetail.cs" />
+    <Compile Include="VendorModels\VendorListItem.cs" />
+    <Compile Include="VendorModels\VendorUpdate.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

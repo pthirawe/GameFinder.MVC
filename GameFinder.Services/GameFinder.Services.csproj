@@ -60,11 +60,13 @@
     <Compile Include="GameGenreService.cs" />
     <Compile Include="GameService.cs" />
     <Compile Include="FeatureService.cs" />
+    <Compile Include="GameVendorService.cs" />
     <Compile Include="GenreService.cs" />
     <Compile Include="PlatformService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PublisherService.cs" />
     <Compile Include="RatingService.cs" />
+    <Compile Include="VendorService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
