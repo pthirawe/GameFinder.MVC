@@ -61,12 +61,14 @@
     <Compile Include="GameFeature.cs" />
     <Compile Include="GameGenre.cs" />
     <Compile Include="GamePlatform.cs" />
+    <Compile Include="GameVendor.cs" />
     <Compile Include="Genre.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Platform.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Publisher.cs" />
     <Compile Include="Rating.cs" />
+    <Compile Include="Vendor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
