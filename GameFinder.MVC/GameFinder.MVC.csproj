@@ -301,9 +301,11 @@
     <Content Include="Views\GameVendor\Details.cshtml" />
     <Content Include="Views\GameVendor\Edit.cshtml" />
     <Content Include="Views\GameVendor\Delete.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateTime.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Assets\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

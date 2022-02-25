@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<GameFinder.Models.DeveloperListItem>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Developer Index";
 }
 
-<h2>Index</h2>
+<h2>Developer Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
 </p>
 
 @if (TempData.ContainsKey("SaveResult"))

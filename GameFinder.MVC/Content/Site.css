@@ -1,12 +1,16 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: lightgrey;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
+    /*
     padding-left: 15px;
     padding-right: 15px;
+    */
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -22,3 +26,87 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.dropshadow {
+    box-shadow: 0 -5px 10px -5px grey inset, 0 5px 10px -5px grey inset;
+}
+
+.hoverdropdown:hover .dropdown-menu{
+    display: block;
+    margin-top: 0;
+}
+
+.jumbotron {
+    position: relative;
+    padding-top:50px;
+    padding-bottom:50px;
+    color: white;
+    text-shadow: 1px 0 2px #1d1d1d, 0 1px 2px #1d1d1d, -1px 0 2px #1d1d1d, 0 -1px 2px #1d1d1d;
+    margin-bottom: 0;
+}
+
+.jumbotron .container {
+    position: relative;
+    z-index: 2;
+}
+
+.jumbotron-billboard .img {
+    width: 100%;
+    height: 100%;
+    background-image: url("../Assets/Unsplash-Branden-Skeli.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.acctdropdown .navbar-text{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.bg-white{
+    background-color: white;
+}
+
+.bg-grey{
+    background-color: lightgrey;
+}
+
+.logo-small {
+    color: #337ab7;
+    font-size: 50px;
+}
+
+.logo {
+    color: #337ab7;
+    font-size: 200px;
+}
+
+.container-fluid{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+}
+

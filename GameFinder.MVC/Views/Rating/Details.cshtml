@@ -1,13 +1,13 @@
 ﻿@model GameFinder.Models.RatingModels.RatingDetail
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Rating Details";
 }
 
-<h2>Details</h2>
+<h2>Rating Details</h2>
 
 <div>
-    <h4>RatingDetail</h4>
+    <h4>@Html.DisplayFor(model => model.GameName) Rating</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>

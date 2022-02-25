@@ -1,10 +1,10 @@
 ﻿@model GameFinder.Models.PublisherCreate
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Add Publisher";
 }
 
-<h2>Create</h2>
+<h2>Add Publisher</h2>
 
 
 @using (Html.BeginForm()) 
@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>PublisherCreate</h4>
+        <h4>Add a new publisher</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
