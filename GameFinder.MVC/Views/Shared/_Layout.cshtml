@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-default navbar-fixed-top dropshadow">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -19,30 +19,44 @@
                 </button>
                 @Html.ActionLink("Game Finder", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse navbar-right">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <li>@Html.ActionLink("Games", "Index", "Game")</li>
+                        <li class="nav-item dropdown hoverdropdown">
+                            <a href="#" class="navbar-link dropdown-toggle" data-toggle="dropdown">Games</a>
+                            @*@Html.ActionLink("Games", "Index", "Game",null, new {@class="nav-link dropdown-toggle", data_toggle = "dropdown"})*@
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Game List", "Index", "Game", null, new { @class = "dropdown-item" })</li>
+                                <li>@Html.ActionLink("Ratings", "Index", "Rating", null, new { @class = "dropdown-item" })</li>
+                                <li>@Html.ActionLink("Game Genre", "Index", "GameGenre", null, new { @class = "dropdown-item" })</li>
+                                <li>@Html.ActionLink("Game Features", "Index", "GameFeature", null, new { @class = "dropdown-item" })</li>
+                                <li>@Html.ActionLink("Game Platform", "Index", "GamePlatform", null, new { @class = "dropdown-item" })</li>
+                                <li>@Html.ActionLink("Game Vendor", "Index", "GameVendor", null, new { @class = "dropdown-item" })</li>
+                            </ul>
+                        </li>
                         <li>@Html.ActionLink("Genres", "Index", "Genre")</li>
                         <li>@Html.ActionLink("Features", "Index", "Feature")</li>
                         <li>@Html.ActionLink("Platforms", "Index", "Platform")</li>
-                        <li>@Html.ActionLink("Ratings", "Index", "Rating")</li>
                         <li>@Html.ActionLink("Developers", "Index", "Developer")</li>
                         <li>@Html.ActionLink("Publishers", "Index", "Publisher")</li>
                     }
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @*<li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
+    @RenderSection("Banner",false)
+    <div class="center-block">
+        @RenderSection("FullWidth",false)
+    </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
+        <footer class="text-center">
             <p>&copy; @DateTime.Now.Year - Game Finder</p>
         </footer>
     </div>
