@@ -64,6 +64,7 @@
     <Compile Include="GameModels\GameDetail.cs" />
     <Compile Include="GameModels\GameListItem.cs" />
     <Compile Include="GameModels\GameUpdate.cs" />
+    <Compile Include="GameSearch.cs" />
     <Compile Include="JoiningModels\GameVendorUpdate.cs" />
     <Compile Include="GenreModels\GenreCreate.cs" />
     <Compile Include="GenreModels\GenreDetail.cs" />

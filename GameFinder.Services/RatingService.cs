@@ -78,6 +78,21 @@ namespace GameFinder.Services
             }
         }
 
+        public IEnumerable<RatingListItem> GetRatingByGame(int gameId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var ratings = ctx.Ratings.Where(r => r.GameId == gameId).Select(r => new RatingListItem()
+                {
+                    RatingId = r.RatingId,
+                    GameName = r.Game.Title,
+                    OverallRating = r.OverallScore
+                });
+
+                return ratings.ToList();
+            }
+        }
+
         public bool UpdateRating(int id, RatingUpdate model)
         {
             using (var ctx = new ApplicationDbContext())
