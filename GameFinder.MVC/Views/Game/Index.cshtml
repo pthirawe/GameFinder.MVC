@@ -21,6 +21,16 @@
     </div>
 }
 
+<form asp-controller="Game" asp-action="Index">
+    <p>
+        Title: <input type="text" name="title" />
+        Genre: <input type="text" name="genre" />
+        Developer: <input type="text" name="dev" />
+        Publisher: <input type="text" name="pub" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
 <table class="table">
     <tr>
         <th>
@@ -28,6 +38,15 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Developer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Publisher)
         </th>
         <th></th>
     </tr>
@@ -42,7 +61,17 @@
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.GameId }) |
+                @Html.DisplayFor(modelItem => item.Genre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Developer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Publisher)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.GameId }) |
                 @Html.ActionLink("Details", "Details", new { id = item.GameId }) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.GameId })
             </td>
