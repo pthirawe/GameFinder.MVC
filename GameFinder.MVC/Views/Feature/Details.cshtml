@@ -1,0 +1,33 @@
+﻿@model GameFinder.Data.Feature
+
+@{
+    ViewBag.Title = "Feature Details";
+}
+
+<h2>Feature Details</h2>
+
+<div>
+    <h4>Feature</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FeatureId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FeatureId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FeatureId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

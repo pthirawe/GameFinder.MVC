@@ -1,31 +1,90 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+@section Banner{
+    <div class="jumbotron jumbotron-billboard">
+        <div class="img"></div>
+        <div class="container">
+            <h1>Game Finder</h1>
+            <p class="lead">A simple searchable database of video games.  </p>
+            @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+        </div>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+    </div>
+}
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+@section FullWidth{
+    <div id="about" class="container-fluid bg-white">
+        <div class="container body-content">
+            <div class="col-sm-8">
+                <h2>About The Project</h2><br>
+                <h4>The goal of the project is to construct a searchable database of video games and to eventually allow users to find games similar to known titles. </h4><br>
+                <p>Currently, the database allows for manual addition of various properties including game titles, publishers, developers, genres, and features.  Currently, connecting games to genres, features, developers, and publishers must be done through their respective sub menus within the games menu by adding the Game ID and respective property ID to the database.  Searching must be done from within the corresponding property menu.</p>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-info-sign logo"></span>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+
+    <div class="container-fluid bg-grey">
+        <div class="container body-content">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-grain logo"></span>
+            </div>
+            <div class="col-sm-8">
+                <h2>Future Plans</h2><br>
+                <h4>I hope to be able to further develop the project into a more useful utility as I continue to develop my skills.</h4><br>
+                <p>
+                    <strong>Interface:</strong> A more refined UI that will be easily accessible and display information in an intuitve way.<br />
+                    <strong>External Sources:</strong> Connection to external game databases to provide always up to date game lists.<br />
+                    <strong>Search:</strong> Better search functionality that will allow users to search for games similar to known titles.
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+
+    <!-- Container (Services Section) -->
+    <div id="services" class="container-fluid text-center bg-white">
+        <div class="container body-content">
+            <h2></h2>
+            <h4>What we offer</h4>
+            <br>
+            <div class="row">
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-list logo-small"></span>
+                    <h4>GAMES</h4>
+                    <p>A database of games.</p>
+                </div>
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-heart logo-small"></span>
+                    <h4>LOVE</h4>
+                    <p>Find other games you might like.</p>
+                </div>
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-usd logo-small"></span>
+                    <h4>VENDORS</h4>
+                    <p>Vendor links provide purchase options.</p>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-search logo-small"></span>
+                    <h4>SEARCH</h4>
+                    <p>Searchable using a variety of criteria.</p>
+                </div>
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-pencil logo-small"></span>
+                    <h4>EDITABLE</h4>
+                    <p>Add games and other properties to help build the database.</p>
+                </div>
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-wrench logo-small"></span>
+                    <h4 style="color:#303030;">WORK IN PROGRESS</h4>
+                    <p>Functional, but still under construction.</p>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+    }

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<GameFinder.Models.JoiningModels.GameVendorListItem>
+
+@{
+    ViewBag.Title = "Game Vendor Index";
+}
+
+<h2>Game Vendor Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GameId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VendorId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VendorName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.GameId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VendorId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VendorName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id= new{ item.GameId,item.VendorId} }) |
+            @Html.ActionLink("Details", "Details", new { id = new { item.GameId, item.VendorId } }) |
+            @Html.ActionLink("Delete", "Delete", new { id = new { item.GameId, item.VendorId } })
+        </td>
+    </tr>
+}
+
+</table>
