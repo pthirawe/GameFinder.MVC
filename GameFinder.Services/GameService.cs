@@ -32,10 +32,14 @@ namespace GameFinder.Services
         {
             using(var ctx = new ApplicationDbContext())
             {
+                var gameGenres = ctx.GameGenres;
                 var gameList = ctx.Games.Select(g => new GameListItem()
                 {
                     GameId = g.GameId,
                     Title = g.Title,
+                    Genre = gameGenres.Where(x => x.GameId == g.GameId).Select(x => x.Genre.Name).ToList(),
+                    Developer = g.Developer.Name,
+                    Publisher = g.Publisher.Name
                 });
                 return gameList.ToList();
             }
@@ -58,6 +62,48 @@ namespace GameFinder.Services
                     PublisherId = game.PublisherId,
                     Publisher = game.Publisher.Name
                 };
+            }
+        }
+
+        public IEnumerable<GameListItem> GetGamesByDev(string devName)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var games = ctx.Games.Where(g => g.Developer.Name.Contains(devName)).Select(g => new GameListItem()
+                {
+                    GameId = g.GameId,
+                    Title = g.Title
+                });
+
+                return games.ToList();
+            }
+        }
+
+        public IEnumerable<GameListItem> GetGamesByPublisher(string pubName)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var games = ctx.Games.Where(g => g.Publisher.Name == pubName).Select(g => new GameListItem()
+                {
+                    GameId = g.GameId,
+                    Title = g.Title
+                });
+
+                return games.ToList();
+            }
+        }
+
+        public IEnumerable<GameListItem> GetGamesByTitle(string title)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var games = ctx.Games.Where(g => g.Title.Contains(title)).Select(g => new GameListItem()
+                {
+                    GameId=g.GameId,
+                    Title=g.Title
+                });
+
+                return games.ToList();
             }
         }
 
